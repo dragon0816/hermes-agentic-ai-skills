@@ -1,54 +1,57 @@
-[
-  {
-    "skill": "productivity/pdf-linked-markdown",
-    "copied": true,
-    "files": [
-      "SKILL.md",
-      "scripts/pdf_linked_markdown.py"
-    ]
-  },
-  {
-    "skill": "research/rs-knowledge-base",
-    "copied": true,
-    "files": [
-      "SKILL.md"
-    ]
-  },
-  {
-    "skill": "productivity/html-report-delivery",
-    "copied": true,
-    "files": [
-      "SKILL.md"
-    ]
-  },
-  {
-    "skill": "productivity/rs-workflow-jobs",
-    "copied": true,
-    "files": [
-      "SKILL.md",
-      "scripts/bridge_job.py"
-    ]
-  },
-  {
-    "skill": "productivity/leo-work-automation",
-    "copied": true,
-    "files": [
-      "SKILL.md"
-    ]
-  },
-  {
-    "skill": "email/outlook-email-workflows",
-    "copied": true,
-    "files": [
-      "SKILL.md"
-    ]
-  },
-  {
-    "skill": "productivity/business-cards",
-    "copied": true,
-    "files": [
-      "SKILL.md",
-      "scripts/cards.py"
-    ]
-  }
-]
+{
+  "exportedAt": "2026-09-21T13:21:12+08:00",
+  "skills": [
+    {
+      "skill": "email/outlook-email-workflows",
+      "copied": true,
+      "files": [
+        "email/outlook-email-workflows/SKILL.md"
+      ]
+    },
+    {
+      "skill": "productivity/business-cards",
+      "copied": true,
+      "files": [
+        "productivity/business-cards/SKILL.md",
+        "productivity/business-cards/scripts/cards.py"
+      ]
+    },
+    {
+      "skill": "productivity/html-report-delivery",
+      "copied": true,
+      "files": [
+        "productivity/html-report-delivery/SKILL.md"
+      ]
+    },
+    {
+      "skill": "productivity/leo-work-automation",
+      "copied": true,
+      "files": [
+        "productivity/leo-work-automation/SKILL.md"
+      ]
+    },
+    {
+      "skill": "productivity/pdf-linked-markdown",
+      "copied": true,
+      "files": [
+        "productivity/pdf-linked-markdown/SKILL.md",
+        "productivity/pdf-linked-markdown/scripts/pdf_linked_markdown.py"
+      ]
+    },
+    {
+      "skill": "productivity/rs-workflow-jobs",
+      "copied": true,
+      "files": [
+        "productivity/rs-workflow-jobs/SKILL.md",
+        "productivity/rs-workflow-jobs/scripts/bridge_job.py"
+      ]
+    },
+    {
+      "skill": "research/rs-knowledge-base",
+      "copied": true,
+      "files": [
+        "research/rs-knowledge-base/SKILL.md"
+      ]
+    }
+  ]
+}
