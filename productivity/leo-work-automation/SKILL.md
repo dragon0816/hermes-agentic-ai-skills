@@ -64,7 +64,7 @@ If a profile id cannot be renamed because the desktop/gateway has it open, keep 
 
 ## Recommended routines
 
-- **Mail Watcher, long-running-by-cron:** every 10–15 minutes; use a script-only watchdog when possible. Establish a baseline first so old mail does not spam Leo, then deliver only new direct-to-Leo mail; keep stdout empty when there is nothing new. Each alert must include a one-line purpose and a short body preview, so Leo can decide without asking what the sender said. Skip equipment/demo-loan approval noise unless it blocks customer action.
+- **Mail Watcher, long-running-by-cron:** every 10–15 minutes; use a script-only watchdog when possible. Establish a baseline first so old mail does not spam Leo, then deliver only new direct-to-Leo mail; keep stdout empty when there is nothing new. Skip equipment/demo-loan approval noise unless it blocks customer action.
 - **Daily Mail Triage:** daily 09:30; start with today’s calendar events and meeting changes, then previous-24h mail. Include Cc-to-Leo, stale customer threads, owner, blocker, recommendation.
 - **R&S Ops Reporter:** Friday 16:30; Host Bridge workflow 10/11, chipset readiness, sales-to-chipset, AE weekly, Non-signaling.
 - **Ticket/HR Snapshot:** weekday morning; C4C, RS Jira, Apollo availability summarized only as available / leave / uncertain.

@@ -40,11 +40,9 @@ items.Sort('[ReceivedTime]', True)
 
 5. **For “today’s email” summaries, separate action from reference.** Prioritize: customer blockers, direct asks, technical follow-ups, approvals, weekly reports, then automated/noise. Mention unread status and attachments only when they affect action. Equipment/demo-loan approval notices are normally noise and should be skipped or filed unless they block customer action.
 
-6. **For direct-mail alerts, include intent and content.** A bare subject is not enough; include a short `用意：` line inferred from the first meaningful body lines plus a compact `內容：` preview, capped so Telegram stays readable. This avoids a follow-up just to ask what the sender said.
+6. **Calendar is not email, but Leo expects it in daily briefings.** For daily reports and questions about missed meeting notices, query Outlook Calendar for today’s events first, then mail; include meeting time, title, organizer, attendees, location/Teams, and preparation context. Do not rely on meeting invitation emails because they may be in Deleted or already accepted.
 
-7. **Calendar is not email, but Leo expects it in daily briefings.** For daily reports and questions about missed meeting notices, query Outlook Calendar for today’s events first, then mail; include meeting time, title, organizer, attendees, location/Teams, and preparation context. Do not rely on meeting invitation emails because they may be in Deleted or already accepted.
-
-8. **For attachment requests, save files into a dated folder and verify by listing the folder.** Preserve sender grouping when requested.
+7. **For attachment requests, save files into a dated folder and verify by listing the folder.** Preserve sender grouping when requested.
 
 ```python
 att.SaveAsFile(str(destination_path))
