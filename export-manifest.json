@@ -1,0 +1,54 @@
+[
+  {
+    "skill": "productivity/pdf-linked-markdown",
+    "copied": true,
+    "files": [
+      "SKILL.md",
+      "scripts/pdf_linked_markdown.py"
+    ]
+  },
+  {
+    "skill": "research/rs-knowledge-base",
+    "copied": true,
+    "files": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "skill": "productivity/html-report-delivery",
+    "copied": true,
+    "files": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "skill": "productivity/rs-workflow-jobs",
+    "copied": true,
+    "files": [
+      "SKILL.md",
+      "scripts/bridge_job.py"
+    ]
+  },
+  {
+    "skill": "productivity/leo-work-automation",
+    "copied": true,
+    "files": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "skill": "email/outlook-email-workflows",
+    "copied": true,
+    "files": [
+      "SKILL.md"
+    ]
+  },
+  {
+    "skill": "productivity/business-cards",
+    "copied": true,
+    "files": [
+      "SKILL.md",
+      "scripts/cards.py"
+    ]
+  }
+]
