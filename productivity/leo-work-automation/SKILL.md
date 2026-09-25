@@ -66,6 +66,7 @@ If a profile id cannot be renamed because the desktop/gateway has it open, keep 
 
 - **Mail Watcher, long-running-by-cron:** every 10–15 minutes; use a script-only watchdog when possible. Establish a baseline first so old mail does not spam Leo, then deliver only new direct-to-Leo mail; keep stdout empty when there is nothing new. Each alert must include a one-line purpose and a short body preview, so Leo can decide without asking what the sender said. Skip equipment/demo-loan approval noise unless it blocks customer action.
 - **Daily Mail Triage:** daily 09:30; start with today’s calendar events and meeting changes, then previous-24h mail. Include Cc-to-Leo, stale customer threads, owner, blocker, recommendation.
+- **Weekly skill export:** Friday evening, run `weekly_skill_git_export.py` in script-only cron to push the curated learned-skill set to `https://github.com/dragon0816/hermes-agentic-ai-skills.git`. Export only the curated Leo-learned skills; never sweep all locally modified bundled skills, because package updates change timestamps and would flood the repo.
 - **R&S Ops Reporter:** Friday 16:30; Host Bridge workflow 10/11, chipset readiness, sales-to-chipset, AE weekly, Non-signaling.
 - **Ticket/HR Snapshot:** weekday morning; C4C, RS Jira, Apollo availability summarized only as available / leave / uncertain.
 - **Coding Agent:** no recurring monitor. Start on demand from Leo or a selected Jira ticket; inspect repo state, use worktrees when practical, build/test before done.

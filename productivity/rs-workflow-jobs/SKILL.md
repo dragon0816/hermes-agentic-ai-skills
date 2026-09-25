@@ -38,7 +38,8 @@ with which fields are required, so read it rather than guessing field names.
 |---|---|
 | `chipset_readiness` | Current chipset coverage, and what appeared since the last scan |
 | `sales_to_chipset` | Which chipsets in the sales pipeline still need development assigned (workflow 10) |
-| `jira_weekly_report` | The AE weekly report (workflow 11) |
+| `jira_weekly_report` | The AE weekly report (workflow 11) from Jira |
+| `github_weekly_report` | GitHub Projects replacement for workflow 11 while Jira Cloud is unavailable; accepts `startTime`/`endTime`, uses GitHub comment timestamps, and falls back from empty GitHub Assignee to `SDE Assignee` |
 | `jira_weekly_email` | The same report rendered as an Outlook draft, with its chart |
 | `c4c_tickets_by_creator` | C4C tickets per team member and their status |
 | `jira_team_tickets` | RS Jira tickets opened by the team and their status |
