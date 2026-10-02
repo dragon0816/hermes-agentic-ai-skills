@@ -71,8 +71,25 @@ If a profile id cannot be renamed because the desktop/gateway has it open, keep 
 - **Ticket/HR Snapshot:** weekday morning; C4C, RS Jira, Apollo availability summarized only as available / leave / uncertain.
 - **Coding Agent:** no recurring monitor. Start on demand from Leo or a selected Jira ticket; inspect repo state, use worktrees when practical, build/test before done.
 
+## AEP capability testing subagent
+
+For Agentic Engineering Platform validation, build the tester as a black-box workspace artifact, not as a product-code change. Place it under the installed AEP workspace, e.g. `%LOCALAPPDATA%/AgenticEngineeringPlatform/preview-0.1.0/workspace/testing-subagent/`, and have it invoke `aep-host` exactly as a user would. The tester must collect artifacts and decide PASS only from verified outputs, never from the agent's claim.
+
+Recommended procedure:
+
+1. Inspect first and save evidence: `aep-host --help`, `aep-host doctor --config <host.json> --json`, `aep-host status --config <host.json> --json`, workspace `assets/skills`, workspace `assets/workflows`, `host.json`, `membership.json`, and `grants.json`.
+2. Run AEP requests through `aep-host ask --config <host.json> --namespace <installed namespace> --json --output <evidence.json> "<message>"`. If `host.json` has no namespace, pass `--namespace`; otherwise the request fails before routing.
+3. Verify Workflow 11 through the installed `weekly` skill route: `weekly.preview` for read-only discovery and `weekly.apply` only when write approval is intended. Check the workflow manifest, run log, workbook hash/content before and after, and email-draft evidence separately.
+4. For SOP-to-workflow tests, create the SOP PDF as an input artifact, then verify a workflow manifest was actually created and executed. Direct browsing or a plausible answer without a generated workflow is a failure.
+5. For R&S Knowledge tests, verify a knowledge capability/route was selected and that retrieved passages or raw citations appear in the outcome. A product answer without knowledge invocation is a failure.
+6. If any test fails, write `test_result.json` plus a GitHub issue payload with build, commit, machine, expected/actual behavior, failure stage, reproduction steps, and evidence paths. Creating a GitHub issue still requires a valid token even for a public repository; if unavailable, stop at the payload.
+
 ## Pitfalls
 
+- **Keep token-setting scripts single-purpose.** If Leo asks only to update an environment variable, do not append `doctor`, workflow execution, or any verification that can look like running the product; write the variable and print that no workflow ran.
+- **Use the AEP actor that the local grants authorize.** A membership-bound actor can still receive `permission_denied` if `grants.json` names another actor, so read both files before diagnosing a workflow failure.
+- **Do not assume public GitHub means issue creation is unauthenticated.** Reading a public repo works without login; creating or updating issues requires a valid token and a fresh read-back of the created/updated issue.
+- **Quote GitHub search strings as one argument in PowerShell.** Titles with spaces must be passed via a variable or `--body-file`/structured arguments; otherwise `gh issue list --search` splits the query and fails before authentication/creation proves anything.
 - **Do not use `cronjob_manage` when the job must belong to a non-default Bot/profile.** It creates jobs in the current active profile, so the Bots pane will not show the routine under the intended agent.
 - **Do not delete working default-profile jobs before verifying the replacement in the target profile.** A failed migration otherwise creates a silent reporting gap.
 - **Do not treat profile display names and profile ids as interchangeable.** CLI routines target the stable id; UI titles can change later.
