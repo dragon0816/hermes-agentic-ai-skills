@@ -6,7 +6,6 @@ Reusable Hermes skills exported from Leo Chi's local Hermes setup.
 
 - `email/outlook-email-workflows`
 - `productivity/business-cards`
-- `productivity/html-report-delivery`
 - `productivity/pdf-linked-markdown`
 - `productivity/rs-workflow-jobs`
 - `research/rs-knowledge-base`

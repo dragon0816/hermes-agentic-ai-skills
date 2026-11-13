@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-11-06T18:00:25+08:00",
+  "exportedAt": "2026-11-13T18:00:55+08:00",
   "skills": [
     {
       "skill": "email/outlook-email-workflows",
@@ -18,10 +18,8 @@
     },
     {
       "skill": "productivity/html-report-delivery",
-      "copied": true,
-      "files": [
-        "productivity/html-report-delivery/SKILL.md"
-      ]
+      "copied": false,
+      "reason": "missing SKILL.md"
     },
     {
       "skill": "productivity/leo-work-automation",
